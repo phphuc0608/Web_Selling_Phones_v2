@@ -56,3 +56,6 @@ Route::post('them_tin_tuc',[\App\Http\Controllers\Tin_tuc_controller::class,'xu_
 Route::get('sua_tin_tuc/{ma_tin_tuc}',[\App\Http\Controllers\Tin_tuc_controller::class,'view_sua'])->name('sua_tin_tuc');
 Route::post('sua_tin_tuc',[\App\Http\Controllers\Tin_tuc_controller::class,'xu_ly_sua']);
 Route::get('xoa_tin_tuc/{ma_tin_tuc}',[\App\Http\Controllers\Tin_tuc_controller::class,'xu_ly_xoa'])->name('xoa_tin_tuc');
+//Hoa don
+Route::get('them_hoa_don',[\App\Http\Controllers\Hoa_don_controller::class,'view_them'])->name('them_hoa_don');
+Route::post('them_hoa_don',[\App\Http\Controllers\Hoa_don_controller::class,'xu_ly_them']);
