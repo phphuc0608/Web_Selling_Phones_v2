@@ -25,6 +25,8 @@ Route::get('sua_loai_san_pham/{ma_loai_san_pham}', [\App\Http\Controllers\Loai_s
 Route::post('sua_loai_san_pham', [\App\Http\Controllers\Loai_san_pham_controller::class, 'xu_ly_sua']);
 Route::get('xoa_loai_san_pham/{ma_loai_san_pham}', [\App\Http\Controllers\Loai_san_pham_controller::class, 'xu_ly_xoa'])->name('xoa_loai_san_pham');
 // Nguoi_dung
+Route::get('dang_nhap',[App\Http\Controllers\Nguoi_dung_controller::class, 'view_dang_nhap'])->name('dang_nhap');
+Route::post('dang_nhap_process',[App\Http\Controllers\Nguoi_dung_controller::class, 'xu_ly_dang_nhap']);
 Route::get('them_nguoi_dung/{page}',[\App\Http\Controllers\Nguoi_dung_controller::class,'view_them'])->name('them_nguoi_dung');
 Route::post('them_nguoi_dung',[\App\Http\Controllers\Nguoi_dung_controller::class, 'xu_ly_them']);
 Route::get('sua_nguoi_dung/{tai_khoan}', [\App\Http\Controllers\Nguoi_dung_controller::class, 'view_sua'])->name('sua_nguoi_dung');
