@@ -11,7 +11,7 @@ class Tin_tuc_controller extends Controller
 {
 	public function view_quan_ly($page)
 	{
-		if (session('nguoi_dungs') != null) {
+		if (session('nguoi_dung') != null) {
 			$loai_tin_tucs = Loai_tin_tuc::all();
 			$data = [];
 			$page_length = 4;
@@ -60,7 +60,7 @@ class Tin_tuc_controller extends Controller
 	}
 	public function view_sua($ma_tin_tuc)
 	{
-		if (session('nguoi_dungs') != null) {
+		if (session('nguoi_dung') != null) {
 			$loai_tin_tucs = Loai_tin_tuc::all();
 			$data = [];
 			$page_length = 4;
