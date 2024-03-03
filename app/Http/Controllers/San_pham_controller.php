@@ -12,7 +12,7 @@ class San_pham_controller extends Controller
 {
 	public function view_quan_ly($page)
 	{
-		if (session('nguoi_dungs') != null) {
+		if (session('nguoi_dung') != null) {
 			$data = [];
 			$page_length = 4;
 			$all_san_phams = San_pham::with(['loai_san_pham', 'nha_san_xuat'])->get();
@@ -30,7 +30,7 @@ class San_pham_controller extends Controller
 	}
 	public function view_them()
 	{
-		if (session('nguoi_dungs') != null) {
+		if (session('nguoi_dung') != null) {
 			$loai_san_phams = Loai_san_pham::all();
 			$nha_san_xuats = Nha_san_xuat::all();
 			return view('San_pham.them_san_pham')->with('loai_san_phams', $loai_san_phams)->with('nha_san_xuats', $nha_san_xuats);
@@ -72,7 +72,7 @@ class San_pham_controller extends Controller
 	}
 	public function view_sua($ma_san_pham)
 	{
-		if (session('nguoi_dungs') != null) {
+		if (session('nguoi_dung') != null) {
 			$loai_san_phams = Loai_san_pham::all();
 			$nha_san_xuats = Nha_san_xuat::all();
 			$data = [];
