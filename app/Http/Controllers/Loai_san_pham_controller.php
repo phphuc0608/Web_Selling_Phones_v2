@@ -7,7 +7,7 @@ class Loai_san_pham_controller extends Controller
 {
   public function view_them($page)
   {
-    if (session('nguoi_dungs') != null) {
+    if (session('nguoi_dung') != null) {
       $data = [];
       $page_length = 4;
       $all_loai_san_phams = Loai_san_pham::all();
@@ -43,7 +43,7 @@ class Loai_san_pham_controller extends Controller
   }
   public function view_sua($ma_loai_san_pham)
   {
-    if (session('nguoi_dungs') != null) {
+    if (session('nguoi_dung') != null) {
       $data = [];
       $page_length = 4;
       $page = 1;
