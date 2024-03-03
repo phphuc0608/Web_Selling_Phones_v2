@@ -11,7 +11,7 @@ class Hoa_don_controller extends Controller
 {
   public function view_them()
   {
-    if (session('nguoi_dungs') != null) {
+    if (session('nguoi_dung') != null) {
       $data = [];
       $data['san_phams'] = San_pham::all();
       return view('Hoa_don.them_hoa_don', $data);
