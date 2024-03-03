@@ -10,7 +10,7 @@ class Nha_san_xuat_controller extends Controller
 {
   public function view_them($page)
   {
-    if (session('nguoi_dungs') != null) {
+    if (session('nguoi_dung') != null) {
       $data = [];
       $page_length = 4;
       $all_nha_san_xuats = Nha_san_xuat::all();
@@ -46,7 +46,7 @@ class Nha_san_xuat_controller extends Controller
   }
   public function view_sua($ma_nha_san_xuat)
   {
-    if (session('nguoi_dungs') != null) {
+    if (session('nguoi_dung') != null) {
       $data = [];
       $page_length = 4;
       $page = 1;
